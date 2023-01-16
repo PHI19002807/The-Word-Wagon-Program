@@ -8,7 +8,8 @@ namespace Prototype
 {
     internal class Book:Items
     {
-        public Book()
+        public Book(string title, string author)
+      : base(title, author)
         {
 
         }
