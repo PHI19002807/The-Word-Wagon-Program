@@ -14,5 +14,15 @@ namespace Prototype
         public List<Cd> Cds { get; set; }
         public List<Dvd> Dvds { get; set; }
         public List<Book> Books { get; set; }
+
+        public Library(string name, string address)
+        {
+            Name = name;
+            Address = address;
+            Loans = new List<Loan>();
+            Cds = new List<Cd>();
+            Dvds = new List<Dvd>();
+            Books = new List<Book>();
+        }
     }
 }
