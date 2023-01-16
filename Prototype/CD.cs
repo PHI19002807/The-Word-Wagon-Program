@@ -8,8 +8,8 @@ namespace Prototype
 {
     internal class CD:Items
     {
-        public CD(string title, string author)
-      : base(title, author)
+        public CD(string title, string author,int id)
+      : base(title, author, id)
         {
 
         }

@@ -8,8 +8,8 @@ namespace Prototype
 {
     internal class DVD:Items
     {
-        public DVD(string title, string author)
-      : base(title, author)
+        public DVD(string title, string author, int id)
+      : base(title, author, id)
         {
 
         }
