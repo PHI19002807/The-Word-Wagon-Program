@@ -8,6 +8,8 @@ namespace Prototype
 {
     internal class Library
     {
-
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public List<Loan> Loan
     }
 }
