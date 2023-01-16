@@ -5,7 +5,7 @@
         public string Title { get; set; } //Auto-gen Properties
         public string Author { get; set; }
         public string Id { get; set; }
-        public Vehicle(string title, 
+        public Items(string title, 
                        string author, 
                        int id)
         {
