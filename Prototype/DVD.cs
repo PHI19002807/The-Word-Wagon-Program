@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prototype
 {
-    internal class DVD:Items
+    internal class Dvd:Items
     {
-        public DVD(string title, string author, int id)
+        public Dvd(string title, string author, int id)
       : base(title, author, id)
         {
 

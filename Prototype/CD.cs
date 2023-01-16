@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prototype
 {
-    internal class CD:Items
+    internal class Cd:Items
     {
-        public CD(string title, string author,int id)
+        public Cd(string title, string author,int id)
       : base(title, author, id)
         {
 

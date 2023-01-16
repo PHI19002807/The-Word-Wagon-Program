@@ -10,6 +10,9 @@ namespace Prototype
     {
         public string Name { get; set; }
         public string Address { get; set; }
-        public List<Loan> Loan
+        public List<Loan> Loans { get; set; }
+        public List<Cd> Cds { get; set; }
+        public List<Dvd> Dvds { get; set; }
+        public List<Book> Books { get; set; }
     }
 }
