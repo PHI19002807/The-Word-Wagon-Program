@@ -22,7 +22,7 @@ namespace Prototype
 
         public override string? ToString()
         {
-            return $"Driver Name: { Name }\nAge: { Age }\nAddress: { Address }";
+            return $"Customer Name: { Name }\nAge: { Age }\nAddress: { Address }";
         }
     }
 }

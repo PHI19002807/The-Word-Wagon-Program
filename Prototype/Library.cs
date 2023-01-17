@@ -25,7 +25,7 @@ namespace Prototype
             Books = new List<Book>();
         }
 
-        public Dvd? GetDvd(string Idnumber)
+        public Dvd? GetDvd(int Idnumber)
         {
             foreach (var dvd in Dvds)
             {
@@ -37,7 +37,7 @@ namespace Prototype
             return null;
         }
 
-        public Cd? GetCd(string Idnumber)
+        public Cd? GetCd(int Idnumber)
         {
             foreach (var cd in Cds)
             {
@@ -49,7 +49,7 @@ namespace Prototype
             return null;
         }
 
-        public Book? GetBook(string Idnumber)
+        public Book? GetBook(int Idnumber)
         {
              foreach (var book in Books)
             {

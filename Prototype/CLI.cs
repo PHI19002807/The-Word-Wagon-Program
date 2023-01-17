@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sharprompt;
+﻿using Sharprompt;
 
 
 namespace Prototype
@@ -43,22 +38,20 @@ namespace Prototype
             switch (manage)
             {
                 case "Add New Loan":
-
                     Console.Clear();
-                    string type = Prompt.Input<string>("Enter type of media (Dvd, Cd, Book");
-
+                    string type = Prompt.Input<string>("Enter type of media Dvd, Cd, Book");
 
                     if (type == "Dvd")
                     {
-
+                        Console.WriteLine();
                     }
                     else if (type == "Cd")
                     {
-
+                        Console.WriteLine();
                     }
                     else if (type == "Book")
                     {
-
+                        Console.WriteLine();
                     }
                     else
                     {

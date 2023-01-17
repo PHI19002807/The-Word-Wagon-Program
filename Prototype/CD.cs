@@ -8,11 +8,9 @@ namespace Prototype
 {
     internal class Cd:Items
     {
-        public Cd(string title, string author,int id)
-      : base(title, author, id)
+        public Cd(string title, string author,int id) : base(title, author, id)
         {
 
         }
     }
 }
-
