@@ -12,7 +12,7 @@ namespace Prototype
             Console.WriteLine($"Welcome to the { library.Name }!");
             Console.WriteLine("-----------------------------------");
 
-            string manage = Prompt.Select("Select your option", new[] { "Manage Loans", "Manage Items" });
+            string manage = Prompt.Select("Select your option", new[] { "Manage Loans", "Manage Overdue Items" });
 
 
             switch (manage)
@@ -20,7 +20,7 @@ namespace Prototype
                 case "Manage Loans":
                     manageLoans();
                     break;
-                case "Manage Items":
+                case "Manage Overdue Items":
                     manageItems();
                     break;
                 default:
@@ -45,7 +45,7 @@ namespace Prototype
                     Cd selectedCd = null;
                     Book selectedBook = null;
 
-                    if (type == "dvd")
+                    if (type == "Dvd")
                     {
                         selectedDvd = Prompt.Select<Dvd>("Select a DVD", library.Dvds);
                         dvd = true;
@@ -116,9 +116,9 @@ namespace Prototype
 
         private static void manageItems()
         {
-            Console.WriteLine($"Items Manager");
+            Console.WriteLine($"Items Overdue Manager");
             Console.WriteLine("---------------");
-            string manage = Prompt.Select("Select your option", new[] { "Add New Loan", "View Loan", "Delete Loan" });
+            string manage = Prompt.Select("Select your option", new[] { "Calculate fine", "View Overdue Items" });
         }
     }
 }
