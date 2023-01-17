@@ -42,7 +42,7 @@ namespace Prototype
         }
 
 
-        private static void manageLoans()
+        private static void manageItems()
         {
             Console.WriteLine($"Items Manager");
             Console.WriteLine("\---------------/");
