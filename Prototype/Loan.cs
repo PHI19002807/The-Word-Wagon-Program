@@ -14,8 +14,9 @@ namespace Encapsulation
         public string ReturnDate { get; set; }
         public string CustomerInfo { get; set; }
         public Items Item { get; set; }
+        public int Id { get; set; }
 
-        public Loan(DateTime currentdate, string duration, bool status, string returndate, string customerinfo, Items items)
+        public Loan(DateTime currentdate, string duration, bool status, string returndate, string customerinfo, Items items, int id)
         {
             CurrentDate = currentdate;
             Duration = duration;
@@ -23,6 +24,7 @@ namespace Encapsulation
             ReturnDate = returndate;
             CustomerInfo = customerinfo;
             Item = items;
+            Id = id;
         }
 
         public override string ToString()

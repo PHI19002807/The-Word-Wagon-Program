@@ -69,6 +69,40 @@ namespace Prototype
                     Console.WriteLine("Press any key to return to the main menu");
                     MainMenu();
                     break;
+                
+                case "View Loan":
+                    Console.Clear();
+                    foreach (var item in library.Loans)
+                    {
+                        Console.WriteLine(item);
+                        Console.WriteLine("--------------");
+                    }
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+
+                case "Delete Loan":
+                    Console.Clear();
+                    string bookinNum = Prompt.Input<string>"Enter Loan ID"
+                    Loan? current = library.GetLoan(Id);
+
+                    if (current != null)
+                    {
+                        library.Loans.Remove(current);
+                        Console.WriteLine("Loan removed");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Loan not found");
+                    }
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+
+                default:
+                    break;
             }
         }
 

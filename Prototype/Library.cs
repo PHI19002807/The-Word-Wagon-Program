@@ -24,5 +24,53 @@ namespace Prototype
             Dvds = new List<Dvd>();
             Books = new List<Book>();
         }
+
+        public Dvd? GetDvd(string Idnumber)
+        {
+            foreach (var dvd in Dvds)
+            {
+                if (dvd.Id == Idnumber)
+                {
+                    return dvd;
+                }
+            }
+            return null;
+        }
+
+        public Cd? GetCd(string Idnumber)
+        {
+            foreach (var cd in Cds)
+            {
+                if (cd.Id == Idnumber)
+                {
+                    return cd;
+                }
+            }
+            return null;
+        }
+
+        public Book? GetBook(string Idnumber)
+        {
+             foreach (var book in Books)
+            {
+                if (book.Id == Idnumber)
+                {
+                    return book;
+                }
+            }
+             return null;
+        }
+
+         public Loan? GetLoan(string LoanId)
+        {
+             foreach (var loan in Loans)
+            {
+                if (loan.Id.ToString() == LoanId)
+                {
+                    return loan;
+                }
+            }
+             return null;
+        }
     }
 }
