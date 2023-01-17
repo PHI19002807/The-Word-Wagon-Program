@@ -26,7 +26,7 @@ namespace Prototype
                     manageLoans();
                     break;
                 case "Manage Items":
-                    managerItems();
+                    manageItems();
                     break;
                 default:
                     break;
@@ -39,6 +39,37 @@ namespace Prototype
             Console.WriteLine($"Loan Manager");
             Console.WriteLine("\---------------/");
             string manage = Prompt.Select("Select your option", new[] { "Add New Loan", "View Loan", "Delete Loan" });
+
+            switch (manage)
+            {
+                case "Add New Loan":
+
+                    Console.Clear();
+                    string type = Prompt.Input<string>("Enter type of media (Dvd, Cd, Book")
+
+
+                    if (type == "Dvd")
+                    {
+
+                    }
+                    else if (type == "Cd")
+                    {
+
+                    }
+                    else if (type == "Book")
+                    {
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Media not found");
+                    }
+
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+            }
         }
 
 
