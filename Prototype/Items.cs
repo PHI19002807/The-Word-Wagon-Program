@@ -4,7 +4,7 @@
     {
         public string Title { get; set; } //Auto-gen Properties
         public string Author { get; set; }
-        public string Id { get; set; }
+        public int Id { get; set; }
         public Items(string title, 
                        string author, 
                        int id)

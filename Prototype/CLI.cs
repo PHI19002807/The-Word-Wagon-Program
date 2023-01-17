@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks
+using System.Threading.Tasks;
 using Sharprompt;
 
 
@@ -15,7 +15,7 @@ namespace Prototype
         {
             Console.Clear();
             Console.WriteLine($"Welcome to the { library.Name }!");
-            Console.WriteLine("\-----------------------------------/");
+            Console.WriteLine("-----------------------------------");
 
             string manage = Prompt.Select("Select your option", new[] { "Manage Loans", "Manage Items" });
 
@@ -37,7 +37,7 @@ namespace Prototype
         private static void manageLoans()
         {
             Console.WriteLine($"Loan Manager");
-            Console.WriteLine("\---------------/");
+            Console.WriteLine("---------------");
             string manage = Prompt.Select("Select your option", new[] { "Add New Loan", "View Loan", "Delete Loan" });
 
             switch (manage)
@@ -45,7 +45,7 @@ namespace Prototype
                 case "Add New Loan":
 
                     Console.Clear();
-                    string type = Prompt.Input<string>("Enter type of media (Dvd, Cd, Book")
+                    string type = Prompt.Input<string>("Enter type of media (Dvd, Cd, Book");
 
 
                     if (type == "Dvd")
@@ -84,7 +84,7 @@ namespace Prototype
 
                 case "Delete Loan":
                     Console.Clear();
-                    string bookinNum = Prompt.Input<string>"Enter Loan ID"
+                    string Id = Prompt.Input<string>("Enter Loan ID");
                     Loan? current = library.GetLoan(Id);
 
                     if (current != null)
@@ -110,7 +110,7 @@ namespace Prototype
         private static void manageItems()
         {
             Console.WriteLine($"Items Manager");
-            Console.WriteLine("\---------------/");
+            Console.WriteLine("---------------");
             string manage = Prompt.Select("Select your option", new[] { "Add New Loan", "View Loan", "Delete Loan" });
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace LIBRARY
+﻿namespace Prototype
 {
     public class Program
     {
