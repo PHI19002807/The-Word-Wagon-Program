@@ -119,6 +119,64 @@ namespace Prototype
             Console.WriteLine($"Items Overdue Manager");
             Console.WriteLine("---------------");
             string manage = Prompt.Select("Select your option", new[] { "Calculate fine", "View Overdue Items" });
+
+            switch (manage)
+            {
+                case "Calculate Fine":
+                    Console.Clear();
+                    int days = Prompt.Input<int>("Enter the numbers of days overdue of the item");
+
+                    if (days > 0)
+                    {
+                        double fine = 0.25 * days;
+                        Console.WriteLine("Fine is £", fine);
+                    }
+ 
+                    else
+                    {
+                        Console.WriteLine("Incorrect input");
+                    }
+
+
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+
+                case "View Overdue Items":
+                    Console.Clear();
+                    foreach (var item in library.Loans)
+                    {
+                        Console.WriteLine(item);
+                        Console.WriteLine("--------------");
+                    }
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+
+                case "Delete Loan":
+                    Console.Clear();
+                    string Id = Prompt.Input<string>("Enter Loan ID");
+                    Loan? current = library.GetLoan(Id);
+
+                    if (current != null)
+                    {
+                        library.Loans.Remove(current);
+                        Console.WriteLine("Loan removed");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Loan not found");
+                    }
+                    Console.ReadLine();
+                    Console.WriteLine("Press any key to return to the main menu");
+                    MainMenu();
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
