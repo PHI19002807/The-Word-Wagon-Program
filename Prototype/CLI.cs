@@ -40,23 +40,37 @@ namespace Prototype
                 case "Add New Loan":
                     Console.Clear();
                     string type = Prompt.Input<string>("Enter type of media Dvd, Cd, Book");
+                    bool dvd, book, cd = false;
+                    Dvd selectedDvd = null;
+                    Cd selectedCd = null;
+                    Book selectedBook = null;
 
                     if (type == "Dvd")
                     {
-                        Console.WriteLine();
+                        selectedDvd = Prompt.Select<Dvd>("Select a DVD", library.Dvds);
+                        dvd = true;
                     }
                     else if (type == "Cd")
                     {
-                        Console.WriteLine();
+                        selectedCd = Prompt.Select<Cd>("Select a Cd", library.Cds);
+                        cd = true;
                     }
                     else if (type == "Book")
                     {
-                        Console.WriteLine();
+                        selectedBook = Prompt.Select<Book>("Select a Book", library.Books);
+                        book = true;
                     }
                     else
                     {
                         Console.WriteLine("Media not found");
                     }
+
+                    if (dvd == true)
+                    {
+
+                    }
+
+                    //Loan newLoan = new Loan((DateTime.Now, ,false, );
 
                     Console.ReadLine();
                     Console.WriteLine("Press any key to return to the main menu");
