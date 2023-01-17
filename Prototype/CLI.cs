@@ -45,7 +45,7 @@ namespace Prototype
                     Cd selectedCd = null;
                     Book selectedBook = null;
 
-                    if (type == "Dvd")
+                    if (type == "dvd")
                     {
                         selectedDvd = Prompt.Select<Dvd>("Select a DVD", library.Dvds);
                         dvd = true;
